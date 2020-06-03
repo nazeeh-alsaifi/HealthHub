@@ -373,19 +373,4 @@
     </div>
 @endsection
 
-@push('script')
-    <script>
-        function changeStatus(msgId) {
-            $.ajax({
-                type: "GET",
-                url: '/change_status/' + msgId,
-                success: function () {
-                    console.log("Data Sent");
-                }
-            });
-            document.getElementById('msg' + msgId).removeAttribute('style');
-        }
-    </script>
-@endpush
-
 
